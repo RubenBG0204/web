@@ -54,45 +54,6 @@ if (scrollTopBtn) {
   });
 }
 
-// Envío de formulario con EmailJS (configurar IDs)
-const contactForm = document.querySelector('#contact-form');
-if (contactForm) {
-  const formStatus = document.querySelector('#form-status');
-  const submitButton = contactForm.querySelector('button[type="submit"]');
-
-  contactForm.addEventListener('submit', event => {
-    event.preventDefault();
-    if (formStatus) {
-      formStatus.textContent = 'Enviando mensaje...';
-    }
-    if (submitButton) {
-      submitButton.disabled = true;
-      submitButton.setAttribute('aria-busy', 'true');
-    }
-
-    // EmailJS configurado con los IDs de Rubén
-    emailjs
-      .sendForm('service_a2606ap', 'template_3hzmakf', contactForm)
-      .then(() => {
-        if (formStatus) {
-          formStatus.textContent = 'Mensaje enviado correctamente.';
-        }
-        contactForm.reset();
-      })
-      .catch(() => {
-        if (formStatus) {
-          formStatus.textContent = 'Hubo un error al enviar el mensaje. Intentalo de nuevo.';
-        }
-      })
-      .finally(() => {
-        if (submitButton) {
-          submitButton.disabled = false;
-          submitButton.removeAttribute('aria-busy');
-        }
-      });
-  });
-}
-
 // Filtro de proyectos por categoria (solo en proyectos.html)
 const filterButtons = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.projects__grid .card[data-category]');

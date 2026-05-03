@@ -217,6 +217,12 @@ textarea:focus-visible {
   color: var(--accent-2);
 }
 
+.btn--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 /* Secciones y grillas */
 section {
   padding: 4.5rem 0;
@@ -430,6 +436,12 @@ section {
 .card__body p {
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
 }
 
 .project-tag {

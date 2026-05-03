@@ -20,12 +20,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <!-- EmailJS (configurar con tu cuenta) -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script>
-    // Public Key de EmailJS configurada por Rubén
-    emailjs.init('WIkXtAlA63mFXV0UX');
-  </script>
   <!-- Estilos -->
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -133,7 +127,11 @@
             <div class="card__body">
               <h4>marca_ropa</h4>
               <p>Tienda online de ropa en desarrollo, enfocada en diseño limpio, catálogo de productos y experiencia responsive.</p>
-              <a class="btn btn--small" href="proyecto-1.html">Ver proyecto</a>
+              <div class="project-links">
+                <a class="btn btn--small" href="proyecto-1.html">Ver proyecto</a>
+                <a class="btn btn--small" href="https://github.com/RubenBG0204/marca_ropa" target="_blank" rel="noopener noreferrer">Ver código</a>
+                <a class="btn btn--small btn--disabled" href="#" aria-disabled="true">Ver demo (próximamente)</a>
+              </div>
             </div>
           </article>
           <!-- Tarjetas vacías hasta tener proyectos reales -->
@@ -159,27 +157,13 @@
         <div class="contact__info reveal">
           <h3>Contacto</h3>
           <p>¿Quieres contactar conmigo o ver mi progreso?</p>
+          <p><strong>Email:</strong> <a href="mailto:rbarrutiagrasa@gmail.com">rbarrutiagrasa@gmail.com</a></p>
+          <p><strong>Teléfono:</strong> <a href="tel:+34647805275">+34 647 805 275</a></p>
           <div class="socials">
             <a href="https://github.com/RubenBG0204" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
-            <a href="https://linkedin.com/in/tuusuario" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+            <a href="https://linkedin.com/in/ruben-barrutia" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
           </div>
         </div>
-        <form class="contact__form reveal" id="contact-form" autocomplete="off">
-          <label>
-            Nombre
-            <input type="text" name="nombre" placeholder="Tu nombre" required />
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" placeholder="tucorreo@email.com" required />
-          </label>
-          <label>
-            Mensaje
-            <textarea name="mensaje" rows="5" placeholder="Cuéntame en qué puedo ayudarte" required></textarea>
-          </label>
-          <button class="btn btn--primary" type="submit">Enviar</button>
-          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
-        </form>
       </div>
     </section>
   </main>
@@ -190,7 +174,7 @@
       <p>© <span id="current-year"></span> Rubén - Desarrollo de Aplicaciones</p>
       <div class="socials">
         <a href="https://github.com/RubenBG0204" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://linkedin.com/in/tuusuario" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://linkedin.com/in/ruben-barrutia" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
     </div>
   </footer>
@@ -202,3 +186,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
